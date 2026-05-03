@@ -1,0 +1,240 @@
+
+/*
+@font-face {
+    font-family: 'GoseongGeumgangNuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+*/
+
+@font-face {
+    font-family: 'GoseongGeumgangNuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg-color: #58C3FF;
+    --point-yellow: #FFD700;
+    --border-line: #000000;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'GoseongGeumgangNuri', sans-serif;
+    color: var(--border-line);
+    line-height: 1.6;
+}
+
+/* 2. 네비바: 더 굵고 강렬하게 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #000;
+    border-bottom: 5px solid var(--border-line);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--point-yellow);
+}
+
+/* 3. 히어로 섹션: 입체감 부여 */
+.hero {
+    background-color: #58C3FF;
+    text-align: center;
+    border-top: none; /* 첫 섹션은 선 제외 */
+    padding: 150px 0;
+}
+
+.hero img {
+    width: 220px;
+    image-rendering: pixelated;
+    filter: drop-shadow(8px 8px 0px rgba(0,0,0,0.2));
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 80px; /* 크기를 확 키웠습니다 */
+    margin-bottom: 20px;
+    text-shadow: 6px 6px 0px #fff;
+    -webkit-text-stroke: 2px var(--border-line);
+}
+
+.slogan {
+    font-size: 20px;
+    background: #fff;
+    padding: 10px 20px;
+    border: 4px solid var(--border-line);
+    box-shadow: 8px 8px 0px var(--border-line);
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+/* 4. 버튼: 클릭하는 손맛(애니메이션) */
+.btn {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--border-line);
+    background: var(--card-bg);
+    border: 4px solid var(--border-line);
+    box-shadow: 8px 8px 0px var(--border-line);
+    position: relative;
+    transition: 0.1s;
+    margin: 10px;
+}
+
+.btn.primary {
+    background: var(--point-yellow);
+}
+
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px var(--border-line);
+}
+
+.btn:active {
+    transform: translate(6px, 6px);
+    box-shadow: 0px 0px 0px var(--border-line);
+}
+
+/* 5. 카드 섹션: 그리드 배치 */
+.why-section {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.section-title {
+    display: inline-block;
+    background: #FFD700;
+    padding: 15px 40px;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0px #000;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* 카드들을 중앙으로 */
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.pixel-card {
+    background: var(--card-bg);
+    border: 5px solid var(--border-line);
+    padding: 40px;
+    box-shadow: 12px 12px 0px var(--border-line);
+    transition: 0.2s;
+}
+
+.pixel-card:hover {
+    transform: rotate(-2deg); /* 살짝 회전하는 효과 */
+}
+
+.pixel-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0066FF;
+}
+
+/* 6. 정보 박스: 블랙 & 화이트 대비 */
+.info-section {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.info-box {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    border: 4px solid #fff;
+    padding: 50px;
+}
+
+.info-box h2 {
+    color: var(--point-yellow);
+    font-size: 30px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.curr-group {
+    margin-bottom: 40px;
+}
+
+.curr-item {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 4px solid var(--bg-color);
+}
+
+.curr-item strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.curr-item p {
+    font-family: sans-serif; /* 본문 가독성 */
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* 7. 푸터 */
+.footer {
+    padding: 60px;
+    text-align: center;
+    background: #111;
+    color: #666;
+    font-size: 12px;
+}
+
+.kakao-link {
+    color: var(--point-yellow);
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+section {
+    padding: 100px 0;
+    border-top: 10px solid #000; /* 섹션 사이의 아주 굵은 경계선 */
+}
+
+.container {
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto;    /* 중앙 정렬의 핵심 */
+    width: 90%;        /* 모바일 대비 */
+}
