@@ -238,3 +238,47 @@ section {
     margin: 0 auto;    /* 중앙 정렬의 핵심 */
     width: 90%;        /* 모바일 대비 */
 }
+
+.activity-section {
+    width: 100% !important;
+    background-color: #58C3FF;
+    padding: 100px 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    border-top: 10px solid #000; /* 섹션 구분선 */
+}
+
+.photo-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 30px !important; /* 카드 사이 간격 */
+    width: 100%;
+    margin-top: 50px;
+}
+
+.photo-card {
+    background: #fff;
+    border: 5px solid #000;
+    padding: 15px;
+    box-shadow: 10px 10px 0px #000;
+    width: 100%;
+    /* 카드가 너무 세로로 길어지지 않게 관리 */
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-card img {
+    width: 100% !important;
+    height: 280px !important; /* 모든 사진 높이 통일 */
+    object-fit: cover !important; /* 비율 유지하며 채우기 */
+    border: 3px solid #000;
+    margin-bottom: 15px;
+}
+
+/* 모바일에서는 1열로 */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
